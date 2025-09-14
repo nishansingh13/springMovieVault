@@ -15,12 +15,18 @@ services:
         value: 86400000
      
       - key: DATABASE_URL
-        value: jdbc:mysql://db4free.net:3306/movie_vault?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+        value: jdbc:mysql://db4free.net:3306/movie_vault?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&connectTimeout=60000&socketTimeout=60000&autoReconnect=true&useUnicode=true&characterEncoding=UTF-8
       - key: DB_USERNAME
         value: nishan2024
       - key: DB_PASSWORD
         value: nishan137
       - key: ALLOWED_ORIGINS
         value: https://movie-vault.onrender.com,http://localhost:8080
+      - key: SPRING_DATASOURCE_HIKARI_CONNECTION_TIMEOUT
+        value: 60000
+      - key: SPRING_DATASOURCE_HIKARI_IDLE_TIMEOUT
+        value: 300000
+      - key: SPRING_DATASOURCE_HIKARI_MAX_LIFETIME
+        value: 1200000
 
 # No local database needed - using external MySQL hosting
