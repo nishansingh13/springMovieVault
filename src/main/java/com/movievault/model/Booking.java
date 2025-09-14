@@ -24,7 +24,7 @@ public class Booking {
     @JoinColumn(name = "show_time_id", nullable = false)
     private ShowTime showTime;
     
-    @Column(name = "booking_date")
+    @Column(name = "booking_date", columnDefinition = "DATETIME")
     private LocalDateTime bookingDate;
     
     @PrePersist

@@ -28,7 +28,7 @@ public class User {
     @Column(length = 15)
     private String phone;
     
-    @Column(name = "created_at")
+    @Column(name = "created_at", columnDefinition = "DATETIME")
     private LocalDateTime createdAt;
     
     @PrePersist

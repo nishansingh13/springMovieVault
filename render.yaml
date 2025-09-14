@@ -15,9 +15,9 @@ services:
         value: 86400000
      
       - key: DATABASE_URL
-        value: jdbc:mysql://57.158.26.198:3306/vault?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&connectTimeout=180000&socketTimeout=180000&autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&tcpKeepAlive=true
+        value: jdbc:mysql://sql12.freesqldatabase.com:3306/sql12798673?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&connectTimeout=180000&socketTimeout=180000&autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&tcpKeepAlive=true
       - key: DB_USERNAME
-        value: root
+        value: sql12798673
       - key: DB_PASSWORD
         value: 1379
       - key: ALLOWED_ORIGINS

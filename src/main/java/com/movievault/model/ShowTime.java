@@ -9,6 +9,7 @@ import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.Column;
 
 import java.util.Date;
 
@@ -21,9 +22,11 @@ public class ShowTime {
     private Long id;
     
     @Temporal(TemporalType.TIMESTAMP)
+    @Column(columnDefinition = "DATETIME")
     private Date startTime;
     
     @Temporal(TemporalType.TIMESTAMP)
+    @Column(columnDefinition = "DATETIME")
     private Date endTime;
     
     @ManyToOne
