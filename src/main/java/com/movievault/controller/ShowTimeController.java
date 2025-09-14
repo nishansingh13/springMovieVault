@@ -106,6 +106,7 @@ public class ShowTimeController {
             ShowTime showTime = new ShowTime();
             showTime.setMovie(movieOpt.get());
             showTime.setTheater(theaterOpt.get());
+            // Use system default timezone which matches database configuration (Asia/Kolkata)
             showTime.setStartTime(Date.from(startTime.atZone(ZoneId.systemDefault()).toInstant()));
             showTime.setEndTime(Date.from(endTime.atZone(ZoneId.systemDefault()).toInstant()));
             
